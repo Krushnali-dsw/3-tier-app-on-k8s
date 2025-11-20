@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Form, Alert, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 
-// Configure axios defaults
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// Configure axios defaults - use relative URLs for Kubernetes
+axios.defaults.baseURL = '';
 
 function App() {
   const [students, setStudents] = useState([]);
