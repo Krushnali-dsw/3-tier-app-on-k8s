@@ -54,6 +54,9 @@ def init_db():
             cursor.close()
             conn.close()
 
+# Initialize database on startup
+init_db()
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
